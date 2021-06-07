@@ -23,7 +23,7 @@ module RailsPushNotifications
       pusher = build_pusher
       pusher.push to_send
       pending.each_with_index do |p, i|
-        p.update_attributes! results: to_send[i].results
+        p.update! results: to_send[i].results
       end
     end
 
